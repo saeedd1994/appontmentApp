@@ -27,12 +27,13 @@ export class AppointmentListComponent {
       this.appointmentTitle = '';
       this.appointmentDate = new Date();
 
-      console.log('this.appointmentList', this.appointmentList)
+      localStorage.setItem('appointments', JSON.stringify(this.appointmentList));
 
     }
   }
 
   deleteItem(index: number) {
-    this.appointmentList.splice(index, 1)
+    this.appointmentList.splice(index, 1);
+    localStorage.setItem('appointments', JSON.stringify(this.appointmentList));
   }
 }
