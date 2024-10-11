@@ -1,3 +1,5 @@
-<p>{{ appointmentList.id }}</p>
-<p>{{ appointmentList.title }}</p>
-<p>{{ appointmentList.date }}</p>
+<div>
+  <input [(ngModel)]="appointmentTitle" type="text" placeholder="set an appointment ">
+  <input [(ngModel)]="appointmentDate" type="date" placeholder="set a date">
+  <button (click)="addAppointment()">add to list</button>
+</div>

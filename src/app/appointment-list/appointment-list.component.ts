@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Appointment} from "../models/appointment";
 
 @Component({
@@ -8,10 +8,13 @@ import {Appointment} from "../models/appointment";
 })
 export class AppointmentListComponent {
 
-  appointmentList: Appointment =
-    {
-      id: 5,
-      title: 'saeed',
-      date: new Date()
-    }
+  appointmentList: Appointment[] = [];
+
+  appointmentTitle: string = '';
+  appointmentDate: Date = new Date();
+
+  addAppointment() {
+    alert(this.appointmentTitle + ' ' + this.appointmentDate);
+  }
+
 }
