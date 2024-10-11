@@ -32,4 +32,7 @@ export class AppointmentListComponent {
     }
   }
 
+  deleteItem(index: number) {
+    this.appointmentList.splice(index, 1)
+  }
 }

@@ -4,8 +4,9 @@
   <button (click)="addAppointment()">add to list</button>
 
   <ul>
-    <li *ngFor="let appointment of appointmentList">
-      {{appointment.title}}  {{appointment.date | date: 'shortDate'}}
+    <li *ngFor="let appointment of appointmentList; index as i">
+      {{ appointment.title }}  {{ appointment.date | date: 'shortDate' }}
+      <button (click)="deleteItem(i)">delete</button>
     </li>
   </ul>
 </div>
