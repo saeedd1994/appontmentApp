@@ -14,7 +14,22 @@ export class AppointmentListComponent {
   appointmentDate: Date = new Date();
 
   addAppointment() {
-    alert(this.appointmentTitle + ' ' + this.appointmentDate);
+    if (this.appointmentTitle.trim().length && this.appointmentDate) {
+
+      let newAppointment: Appointment = {
+        id: Date.now(),
+        title: this.appointmentTitle,
+        date: this.appointmentDate,
+      }
+
+      this.appointmentList.push(newAppointment);
+
+      this.appointmentTitle = '';
+      this.appointmentDate = new Date();
+
+      console.log('this.appointmentList', this.appointmentList)
+
+    }
   }
 
 }
